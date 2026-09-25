@@ -1,0 +1,243 @@
+# ROLE
+You are an expert Full-Stack PHP Developer & Database Architect with deep technical experience in building production-grade earning/microjob platforms.
+
+# TASK
+Your task is to build "Task Zone" — a Micro Jobs Earning Website
+for a Bangladeshi admin-operated platform where users complete admin-posted tasks, claim free daily spin bonuses, and withdraw earnings via Bkash/Nagad/Rocket with extreme accuracy.
+
+# LANGUAGE MODE (STRICT)
+You MUST write ALL code, ALL logic, ALL files ONLY in:
+➡️ PHP 8 (procedural + prepared statements), HTML5, CSS3, Vanilla JavaScript
+
+❌ You are NOT allowed to use any other languages, frameworks, or syntaxes.
+❌ Do NOT auto-select alternatives (no Laravel, no Node.js, no React).
+❌ Follow EXACTLY what is specified.
+
+# LANGUAGE / TEXT (STRICT)
+✅ ALL visible UI text, labels, buttons, messages, placeholders, headings, error messages, success messages MUST be written in BENGALI (বাংলা).
+✅ Admin panel text MUST also be fully in BENGALI.
+✅ Database field names and PHP variable names remain in English (code-level only).
+✅ Do NOT use any English text in the visible UI under any circumstances.
+
+# TECH STACK (STRICT)
+Use ONLY the following technologies:
+✅ PHP 8 (native, no framework)
+✅ MySQL (via mysqli, prepared statements only)
+✅ HTML5 / CSS3 (mobile-first, app-style UI)
+✅ Vanilla JavaScript (no jQuery, no npm)
+
+DO NOT use under any circumstances:
+❌ Composer / Laravel / Symfony
+❌ Any auto-suggested libraries
+❌ Any AI-selected replacements
+❌ Any paid/gambling mechanic where money is wagered for randomized payout (strictly excluded from scope)
+
+# FOLDER STRUCTURE
+Create the following EXACT structure:
+📁 taskzone/
+┣ 📄 config/db.php
+┣ 📄 index.php
+┣ 📄 register.php
+┣ 📄 login.php
+┣ 📄 logout.php
+┣ 📄 dashboard.php
+┣ 📄 tasks.php
+┣ 📄 task_details.php
+┣ 📄 submit_task.php
+┣ 📄 my_submissions.php
+┣ 📄 wallet.php
+┣ 📄 withdraw.php
+┣ 📄 profile.php
+┣ 📄 spin.php
+┣ 📄 notifications.php
+┣ 📄 notices.php
+┣ 📄 page.php
+┣ 📁 includes/
+┃ ┣ 📄 header.php
+┃ ┣ 📄 footer.php
+┃ ┣ 📄 bottom_nav.php
+┃ ┣ 📄 auth_check.php
+┃ ┗ 📄 popup.php
+┣ 📁 admin/
+┃ ┣ 📄 admin_login.php
+┃ ┣ 📄 admin_logout.php
+┃ ┣ 📄 admin_dashboard.php
+┃ ┣ 📄 manage_tasks.php
+┃ ┣ 📄 add_task.php
+┃ ┣ 📄 edit_task.php
+┃ ┣ 📄 delete_task.php
+┃ ┣ 📄 review_submissions.php
+┃ ┣ 📄 manage_withdrawals.php
+┃ ┣ 📄 manage_users.php
+┃ ┣ 📄 edit_user.php
+┃ ┣ 📄 delete_user.php
+┃ ┣ 📄 manage_spin.php
+┃ ┣ 📄 add_spin_prize.php
+┃ ┣ 📄 edit_spin_prize.php
+┃ ┣ 📄 delete_spin_prize.php
+┃ ┣ 📄 cms_pages.php
+┃ ┣ 📄 add_page.php
+┃ ┣ 📄 edit_page.php
+┃ ┣ 📄 delete_page.php
+┃ ┣ 📄 manage_popups.php
+┃ ┣ 📄 add_popup.php
+┃ ┣ 📄 edit_popup.php
+┃ ┣ 📄 delete_popup.php
+┃ ┣ 📄 manage_notifications.php
+┃ ┣ 📄 send_notification.php
+┃ ┣ 📄 manage_notices.php
+┃ ┣ 📄 add_notice.php
+┃ ┣ 📄 edit_notice.php
+┃ ┗ 📄 delete_notice.php
+┣ 📁 assets/css/style.css
+┣ 📁 assets/js/script.js
+┗ 📁 uploads/proofs/
+
+No extra folders. No renaming. No additional files unless specified.
+
+# FEATURES (STRICT STEPS)
+
+### User Authentication:
+Step 1 → User registers with name, email, phone, password (hashed via password_hash)
+Step 2 → User logs in, session created with user_id, role
+Step 3 → Auth check on every protected page redirects to login.php if not logged in
+
+### Task System (User Side):
+Step 1 → Display active tasks list (title, reward amount, category, slots left)
+Step 2 → User opens task_details.php, sees full instructions
+Step 3 → User submits proof (screenshot upload + text/link) via submit_task.php
+Step 4 → Submission stored as "pending", user blocked from resubmitting same task
+Step 5 → my_submissions.php shows status: Pending / Approved / Rejected — all labels in Bengali
+
+### Wallet & Withdraw System:
+Step 1 → wallet.php shows current balance + full transaction history
+Step 2 → On admin approval of a submission, balance auto-credited + transaction logged
+Step 3 → withdraw.php lets user request withdrawal (method: Bkash/Nagad/Rocket, number, amount)
+Step 4 → System checks minimum withdrawal amount and sufficient balance before allowing request
+Step 5 → Withdrawal status shown as Pending/Approved/Rejected in wallet history — all in Bengali
+
+### Free Daily Spin (no payment required, no wagering):
+Step 1 → User opens spin.php once per 24 hours (server-side timestamp check, no payment involved)
+Step 2 → System randomly selects a prize from admin-configured prize list (weighted by admin-set probability)
+Step 3 → Prize amount auto-credited to wallet + transaction logged as "স্পিন বোনাস"
+Step 4 → Next eligible spin time shown to user (countdown) — label in Bengali
+
+### Notifications & Notices:
+Step 1 → notifications.php shows individual/broadcast messages sent by admin
+Step 2 → notices.php shows public announcement history
+Step 3 → popup.php displays active admin-scheduled popup banner on login/dashboard load
+
+### CMS (Static Pages):
+Step 1 → page.php dynamically renders admin-created pages by slug
+Step 2 → Pages stored in DB with title, slug, content (HTML), status
+
+### Admin — Task Control (Full CRUD):
+Step 1 → add_task.php: Admin creates task (title, description, category, reward, proof_type, slots, status)
+Step 2 → manage_tasks.php: Admin views all tasks with Edit/Delete/Activate-Deactivate buttons
+Step 3 → edit_task.php: Admin updates any task field
+Step 4 → delete_task.php: Admin deletes task (cascades related submissions)
+
+### Admin — Submission Review:
+Step 1 → review_submissions.php: Admin views all pending submissions with proof preview
+Step 2 → Admin clicks Approve → balance credited + status updated + transaction logged
+Step 3 → Admin clicks Reject → status updated with reason, no balance change
+
+### Admin — Withdrawal Control:
+Step 1 → manage_withdrawals.php: Admin views all withdrawal requests
+Step 2 → Admin Approves → status updated
+Step 3 → Admin Rejects → status updated, balance refunded back to user wallet
+
+### Admin — User Management (Full CRUD):
+Step 1 → manage_users.php: Admin views all users (name, email, balance, status, join date)
+Step 2 → edit_user.php: Admin edits user details or manually adjusts balance
+Step 3 → delete_user.php: Admin deletes/bans user account
+
+### Admin — Free Spin Prize Control (Full CRUD):
+Step 1 → manage_spin.php: Admin views all spin prizes
+Step 2 → add_spin_prize.php: Admin adds prize (label, amount, probability weight, status)
+Step 3 → edit_spin_prize.php: Admin updates prize details
+Step 4 → delete_spin_prize.php: Admin removes a prize
+
+### Admin — CMS Page Control (Full CRUD):
+Step 1 → cms_pages.php: Admin views all static pages
+Step 2 → add_page.php: Admin creates page (title, slug, content, status)
+Step 3 → edit_page.php: Admin updates page content
+Step 4 → delete_page.php: Admin deletes page
+
+### Admin — Popup Control (Full CRUD):
+Step 1 → manage_popups.php: Admin views all popups
+Step 2 → add_popup.php: Admin creates popup (title, message, image, start/end schedule, status)
+Step 3 → edit_popup.php: Admin updates popup
+Step 4 → delete_popup.php: Admin deletes popup
+
+### Admin — Notification Control:
+Step 1 → manage_notifications.php: Admin views sent notification history
+Step 2 → send_notification.php: Admin sends notification (target: all users / single user, title, message)
+
+### Admin — Notice Board Control (Full CRUD):
+Step 1 → manage_notices.php: Admin views all notices
+Step 2 → add_notice.php: Admin creates notice (title, content, date)
+Step 3 → edit_notice.php: Admin updates notice
+Step 4 → delete_notice.php: Admin deletes notice
+
+### Admin Dashboard (Overview):
+Step 1 → Show: মোট ইউজার, মোট টাস্ক, পেন্ডিং সাবমিশন, পেন্ডিং উইথড্র
+Step 2 → Show: মোট পেআউট, আজকের নতুন ইউজার, আজকের সাবমিশন, সক্রিয় পপআপ
+
+# DATABASE STRUCTURE
+Use ONLY this layout:
+- users (id, name, email, phone, password, balance, status, role, last_spin_at, created_at)
+- tasks (id, title, description, category, reward, proof_type, slots, slots_used, status, created_at)
+- submissions (id, user_id, task_id, proof_text, proof_file, status, reject_reason, submitted_at, reviewed_at)
+- wallet_transactions (id, user_id, type, amount, description, created_at)
+- withdrawals (id, user_id, method, account_number, amount, status, requested_at, reviewed_at)
+- spin_prizes (id, label, amount, probability_weight, status, created_at)
+- cms_pages (id, title, slug, content, status, created_at)
+- popups (id, title, message, image, start_at, end_at, status, created_at)
+- notifications (id, user_id, title, message, is_read, created_at)
+- notices (id, title, content, created_at)
+- admins (id, name, email, password, created_at)
+
+Do NOT add extra columns, extra tables, or alter formatting.
+
+# RULES (VERY STRICT)
+✅ Follow EXACT format
+✅ ALL visible UI text MUST be in Bengali (বাংলা) — buttons, labels, messages, headings, errors, placeholders
+✅ Admin panel UI text MUST also be fully in Bengali
+✅ ALL database queries MUST use prepared statements
+✅ Free spin MUST NOT require any payment or wager
+❌ Do NOT add comments unless asked
+❌ Do NOT optimize code beyond instructions
+❌ Do NOT change structure, filenames, or logic
+❌ Do NOT add unlisted dependencies
+❌ Do NOT use any English text in visible UI
+
+# OUTPUT REQUIREMENTS
+Generate ONLY the following files with full production-ready code:
+
+- config/db.php
+- register.php / login.php / logout.php
+- dashboard.php / tasks.php / task_details.php / submit_task.php / my_submissions.php
+- wallet.php / withdraw.php / profile.php / spin.php
+- notifications.php / notices.php / page.php
+- admin/admin_login.php / admin_dashboard.php / admin_logout.php
+- admin/add_task.php / manage_tasks.php / edit_task.php / delete_task.php
+- admin/review_submissions.php
+- admin/manage_withdrawals.php
+- admin/manage_users.php / edit_user.php / delete_user.php
+- admin/manage_spin.php / add_spin_prize.php / edit_spin_prize.php / delete_spin_prize.php
+- admin/cms_pages.php / add_page.php / edit_page.php / delete_page.php
+- admin/manage_popups.php / add_popup.php / edit_popup.php / delete_popup.php
+- admin/manage_notifications.php / send_notification.php
+- admin/manage_notices.php / add_notice.php / edit_notice.php / delete_notice.php
+- includes/header.php / footer.php / bottom_nav.php / auth_check.php / popup.php
+- assets/css/style.css / assets/js/script.js
+
+Additionally generate:
+- UI Screens (approved tech only)
+- Functional logic
+- Workflow instructions
+- Integration steps
+
+DO NOT output anything outside these requirements.
+DO NOT insert explanations unless requested.
