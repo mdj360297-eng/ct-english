@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CT English Preparation</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#e8f5e9,#e3f2fd);
+    color:#222;
+}
+
+.header{
+    background:linear-gradient(135deg,#1565c0,#00897b);
+    color:white;
+    padding:25px 15px;
+    text-align:center;
+    border-radius:0 0 25px 25px;
+    box-shadow:0 4px 15px #0003;
+}
+
+.header h1{
+    margin:0;
+    font-size:27px;
+}
+
+.header p{
+    margin:8px 0 0;
+    font-size:14px;
+}
+
+.container{
+    padding:18px;
+    max-width:700px;
+    margin:auto;
+}
+
+.info{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:18px;
+    box-shadow:0 3px 10px #0002;
+}
+
+.info b{
+    color:#1565c0;
+}
+
+.card{
+    background:white;
+    margin-bottom:18px;
+    padding:18px;
+    border-radius:18px;
+    box-shadow:0 4px 12px #0002;
+}
+
+.badge{
+    display:inline-block;
+    background:#e53935;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.card h2{
+    font-size:19px;
+    margin:12px 0;
+    color:#1565c0;
+}
+
+.answer{
+    display:none;
+    margin-top:15px;
+}
+
+.dialogue{
+    background:#f5f7fa;
+    padding:12px;
+    border-radius:12px;
+    margin:8px 0;
+    line-height:1.6;
+}
+
+.english{
+    cursor:pointer;
+    padding:8px;
+    border-radius:8px;
+}
+
+.english:active{
+    background:#e3f2fd;
+}
+
+.bangla{
+    display:none;
+    background:#fff8e1;
+    color:#5d4037;
+    padding:9px;
+    margin-top:5px;
+    border-left:4px solid #ffb300;
+    border-radius:6px;
+}
+
+button{
+    width:100%;
+    border:0;
+    padding:13px;
+    border-radius:12px;
+    background:#1565c0;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0d47a1;
+}
+
+.tip{
+    text-align:center;
+    font-size:13px;
+    color:#555;
+    margin:20px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>📚 CT English Preparation</h1>
+    <p>শুধু CT-এর গুরুত্বপূর্ণ প্রশ্নগুলো</p>
+</div>
+
+<div class="container">
+
+<div class="info">
+    <b>📌 ব্যবহার করার নিয়ম:</b>
+    <p>
+        নিচের প্রশ্ন থেকে <b>Show Answer</b> চাপ দাও।
+        English বাক্যের ওপর চাপ দিলে তার বাংলা অর্থ দেখা যাবে।
+    </p>
+</div>
+
+
+<!-- QUESTION 1 -->
+
+<div class="card">
+
+<span class="badge">CT</span>
+
+<h2>1. A dialogue on how to make a good result in the examination</h2>
+
+<button onclick="toggleAnswer('answer1',this)">
+    Show Answer
+</button>
+
+<div class="answer" id="answer1">
+
+<div class="dialogue">
+
+<div class="english" onclick="translateText(this)">
+<b>Rafi:</b> Hello, Karim. How are you?
+</div>
+<div class="bangla">
+রাফি: হ্যালো করিম। তুমি কেমন আছো?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Karim:</b> I am fine. How are you?
+</div>
+<div class="bangla">
+করিম: আমি ভালো আছি। তুমি কেমন আছো?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Rafi:</b> I am also fine. How can I make a good result in the examination?
+</div>
+<div class="bangla">
+রাফি: আমিও ভালো আছি। পরীক্ষায় কীভাবে ভালো ফলাফল করতে পারি?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Karim:</b> You should study regularly and attentively.
+</div>
+<div class="bangla">
+করিম: তোমার নিয়মিত ও মনোযোগ দিয়ে পড়াশোনা করা উচিত।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Rafi:</b> Should I make a routine?
+</div>
+<div class="bangla">
+রাফি: আমার কি একটি রুটিন তৈরি করা উচিত?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Karim:</b> Yes. You should follow a proper study routine.
+</div>
+<div class="bangla">
+করিম: হ্যাঁ। তোমার একটি সঠিক পড়াশোনার রুটিন মেনে চলা উচিত।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Rafi:</b> Thank you for your advice.
+</div>
+<div class="bangla">
+রাফি: তোমার পরামর্শের জন্য ধন্যবাদ।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Karim:</b> You are welcome.
+</div>
+<div class="bangla">
+করিম: তোমাকে স্বাগতম।
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- QUESTION 2 -->
+
+<div class="card">
+
+<span class="badge">CT</span>
+
+<h2>2. A dialogue about importance of English</h2>
+
+<button onclick="toggleAnswer('answer2',this)">
+    Show Answer
+</button>
+
+<div class="answer" id="answer2">
+
+<div class="dialogue">
+
+<div class="english" onclick="translateText(this)">
+<b>Jisan:</b> Hello, friend. Do you think English is important?
+</div>
+<div class="bangla">
+জিসান: হ্যালো বন্ধু। তুমি কি মনে কর ইংরেজি গুরুত্বপূর্ণ?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Friend:</b> Yes, English is very important.
+</div>
+<div class="bangla">
+বন্ধু: হ্যাঁ, ইংরেজি খুবই গুরুত্বপূর্ণ।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Jisan:</b> Why is English important?
+</div>
+<div class="bangla">
+জিসান: ইংরেজি কেন গুরুত্বপূর্ণ?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Friend:</b> It is an international language.
+</div>
+<div class="bangla">
+বন্ধু: এটি একটি আন্তর্জাতিক ভাষা।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Jisan:</b> Can English help us in higher education?
+</div>
+<div class="bangla">
+জিসান: উচ্চশিক্ষায় ইংরেজি কি আমাদের সাহায্য করতে পারে?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Friend:</b> Yes. It is also useful for communication and getting a good job.
+</div>
+<div class="bangla">
+বন্ধু: হ্যাঁ। যোগাযোগ এবং ভালো চাকরি পাওয়ার ক্ষেত্রেও এটি উপকারী।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Jisan:</b> Then we should learn English properly.
+</div>
+<div class="bangla">
+জিসান: তাহলে আমাদের সঠিকভাবে ইংরেজি শেখা উচিত।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Friend:</b> Exactly.
+</div>
+<div class="bangla">
+বন্ধু: ঠিক তাই।
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- QUESTION 3 -->
+
+<div class="card">
+
+<span class="badge">CT</span>
+
+<h2>3. A dialogue between two students about their hobbies</h2>
+
+<button onclick="toggleAnswer('answer3',this)">
+    Show Answer
+</button>
+
+<div class="answer" id="answer3">
+
+<div class="dialogue">
+
+<div class="english" onclick="translateText(this)">
+<b>Rana:</b> Hello, what is your hobby?
+</div>
+<div class="bangla">
+রানা: হ্যালো, তোমার শখ কী?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Hasan:</b> My hobby is reading books. What is your hobby?
+</div>
+<div class="bangla">
+হাসান: আমার শখ বই পড়া। তোমার শখ কী?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Rana:</b> My hobby is gardening.
+</div>
+<div class="bangla">
+রানা: আমার শখ বাগান করা।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Hasan:</b> Why do you like gardening?
+</div>
+<div class="bangla">
+হাসান: তুমি বাগান করতে পছন্দ কর কেন?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Rana:</b> It gives me pleasure and keeps my mind fresh.
+</div>
+<div class="bangla">
+রানা: এটি আমাকে আনন্দ দেয় এবং আমার মন সতেজ রাখে।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Hasan:</b> That is a very good hobby.
+</div>
+<div class="bangla">
+হাসান: এটি খুব ভালো একটি শখ।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Rana:</b> Thank you.
+</div>
+<div class="bangla">
+রানা: ধন্যবাদ।
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- QUESTION 4 -->
+
+<div class="card">
+
+<span class="badge">CT</span>
+
+<h2>4. A conversation between a doctor and a patient</h2>
+
+<button onclick="toggleAnswer('answer4',this)">
+    Show Answer
+</button>
+
+<div class="answer" id="answer4">
+
+<div class="dialogue">
+
+<div class="english" onclick="translateText(this)">
+<b>Doctor:</b> What is the matter with you?
+</div>
+<div class="bangla">
+ডাক্তার: তোমার কী সমস্যা?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Patient:</b> I have been suffering from fever for two days.
+</div>
+<div class="bangla">
+রোগী: আমি দুই দিন ধরে জ্বরে ভুগছি।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Doctor:</b> Do you have a cough or cold?
+</div>
+<div class="bangla">
+ডাক্তার: তোমার কি কাশি বা সর্দি আছে?
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Patient:</b> Yes, I have a little cough.
+</div>
+<div class="bangla">
+রোগী: হ্যাঁ, আমার সামান্য কাশি আছে।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Doctor:</b> Take these medicines and take proper rest.
+</div>
+<div class="bangla">
+ডাক্তার: এই ওষুধগুলো খাও এবং পর্যাপ্ত বিশ্রাম নাও।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Patient:</b> Thank you, doctor.
+</div>
+<div class="bangla">
+রোগী: ধন্যবাদ, ডাক্তার।
+</div>
+
+<div class="english" onclick="translateText(this)">
+<b>Doctor:</b> You are welcome. Take care.
+</div>
+<div class="bangla">
+ডাক্তার: তোমাকে স্বাগতম। নিজের যত্ন নিও।
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<div class="tip">
+📖 English বাক্যে চাপ দিলে বাংলা অর্থ দেখাবে।
+</div>
+
+</div>
+
+
+<script>
+
+function toggleAnswer(id,button){
+
+    let answer = document.getElementById(id);
+
+    if(answer.style.display === "block"){
+        answer.style.display = "none";
+        button.innerText = "Show Answer";
+    }
+    else{
+        answer.style.display = "block";
+        button.innerText = "Hide Answer";
+    }
+
+}
+
+function translateText(element){
+
+    let bangla = element.nextElementSibling;
+
+    if(bangla.style.display === "block"){
+        bangla.style.display = "none";
+    }
+    else{
+        bangla.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
